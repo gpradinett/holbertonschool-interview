@@ -5,19 +5,8 @@ script that reads stdin line by line and computes metrics
 import sys
 
 
-"""
-Dictionary to store the number of lines for each status code
-"""
-status_codes = {
-    200: 0,
-    301: 0,
-    400: 0,
-    401: 0,
-    403: 0,
-    404: 0,
-    405: 0,
-    500: 0
-}
+status_codes = {200: 0, 301: 0, 400: 0, 401: 0,
+                403: 0, 404: 0, 405: 0, 500: 0}
 
 """
 Variable to store the total file size
