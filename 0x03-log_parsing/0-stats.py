@@ -4,7 +4,10 @@ script that reads stdin line by line and computes metrics
 """
 import sys
 
-# Dictionary to store the number of lines for each status code
+"""
+Dictionary to store the number of lines for each status code
+"""
+
 status_codes = {
     200: 0,
     301: 0,
@@ -16,10 +19,14 @@ status_codes = {
     500: 0
 }
 
-# Variable to store the total file size
+"""
+Variable to store the total file size
+"""
 total_sizes = 0
 
-# Counter to keep track of the number of lines read
+"""
+Counter to keep track of the number of lines read
+"""
 line_counter = 1
 
 
@@ -35,9 +42,9 @@ def printStats():
 
 
 try:
-    # Read lines from stdin one by one
+    """ Read lines from stdin one by one """
     for line in sys.stdin:
-        # Parse the line to extract the status code and file size
+        """ Parse the line to extract the status code and file size """
         try:
             line = line[:-1]
             parts = line.split(' ')
@@ -46,12 +53,12 @@ try:
             if status_code in status_codes:
                 status_codes[status_code] += 1
 
-        except Exception:
+        except (ValueError, IndexError):
             """
             Skip the line if it is
             not in the expected format
             """
-            pass
+            continue
 
         """
         Print the statistics every 10 lines
