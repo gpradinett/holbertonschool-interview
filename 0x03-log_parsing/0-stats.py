@@ -16,7 +16,7 @@ code_status = {
     500: 0}
 
 total_sizes = 0
-count_line = 1
+count_line = 0
 
 
 def printStats():
