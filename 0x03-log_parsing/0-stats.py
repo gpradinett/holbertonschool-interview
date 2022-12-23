@@ -4,10 +4,10 @@ script that reads stdin line by line and computes metrics
 """
 import sys
 
+
 """
 Dictionary to store the number of lines for each status code
 """
-
 status_codes = {
     200: 0,
     301: 0,
