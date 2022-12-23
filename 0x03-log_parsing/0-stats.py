@@ -23,7 +23,7 @@ def printStats():
     """
     Prints file size and stats for every 10 loops
     """
-    print('File size: {}'.format(total_sizes))
+    print("File size:", total_sizes)
     for code in sorted(dict_status.keys()):
         if dict_status[code] != 0:
             print('{}: {}'.format(code, dict_status[code]))
