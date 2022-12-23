@@ -46,12 +46,12 @@ try:
             if status_code in status_codes:
                 status_codes[status_code] += 1
 
-        except (ValueError, IndexError):
+        except Exception:
             """
             Skip the line if it is
             not in the expected format
             """
-            continue
+            pass
 
         """
         Print the statistics every 10 lines
