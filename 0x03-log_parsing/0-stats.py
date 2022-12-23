@@ -16,7 +16,6 @@ status_codes = {
 }
 
 total_sizes = 0
-
 line_counter = 1
 
 
