@@ -13,8 +13,7 @@ line_counter = 1
 
 def printStats():
     """
-    Print the final statistics after
-    all lines have been read
+    Print the final statistics after all lines have been read
     """
     print("File size:", total_sizes)
     for code in sorted(status_codes.keys()):
