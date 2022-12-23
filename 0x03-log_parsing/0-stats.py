@@ -41,6 +41,10 @@ try:
         except Exception:
             pass
 
+        """
+        Print the statistics every 10 lines or
+        when a keyboard interruption occurs
+        """
         if count_line % 10 == 0:
             printStats()
         count_line += 1
