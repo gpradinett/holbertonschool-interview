@@ -26,7 +26,7 @@ def printStats():
     print('File size: {}'.format(total_sizes))
     for code in sorted(dict_status.keys()):
         if dict_status[code] != 0:
-            print(f"{code}: {status_codes[code]}")
+            print('{}: {}'.format(code, dict_status[code]))
 
 
 try:
