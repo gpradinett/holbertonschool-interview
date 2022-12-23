@@ -4,7 +4,9 @@ Write a script that reads stdin line by line and computes metrics
 """
 import sys
 
-
+"""
+Dictionary to store the number of lines for each status code
+"""
 code_status = {
     200: 0,
     301: 0,
@@ -15,13 +17,15 @@ code_status = {
     405: 0,
     500: 0}
 
+# Variable to store the total file size
 total_sizes = 0
+# Counter to keep track of the number of lines read
 count_line = 1
 
 
 def printStats():
     """
-    Prints file size and stats for every 10 loops
+    Print the final statistics after all lines have been read
     """
     print('File size: {}'.format(total_sizes))
     for code in sorted(code_status.keys()):
@@ -30,6 +34,7 @@ def printStats():
 
 
 try:
+    # Read lines from stdin one by one
     for line in sys.stdin:
         try:
             line = line[:-1]
@@ -39,6 +44,7 @@ try:
             if status_code in code_status:
                 code_status[status_code] += 1
         except Exception:
+            # Skip the line if it is not in the expected format
             pass
 
         """
