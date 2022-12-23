@@ -38,7 +38,7 @@ try:
             status_code = int(parts[-2])
             if status_code in dict_status:
                 dict_status[status_code] += 1
-        except Exception: 
+        except Exception:
             pass
 
         if count_line % 10 == 0:
