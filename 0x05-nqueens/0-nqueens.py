@@ -121,7 +121,7 @@ if argc != 2:
 # Verificamos si el argumento N es un entero
 n = validate_integer(argv[1])
 
-if n is str:
+if n == 1:
     print("N must be a number")
     sys.exit(1)
 
