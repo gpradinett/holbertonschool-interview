@@ -49,7 +49,7 @@ if n < 4:
 # Podemos continuar con el programa...
 
 result = []
-board = [[0 for j in range(n)] for i in range(n)]
+board = [[0 for j in range(n)] for i in range()]
 count = 0
 
 for row in board:
@@ -59,4 +59,3 @@ for row in board:
         print('\n')
 
 print(result)
-
