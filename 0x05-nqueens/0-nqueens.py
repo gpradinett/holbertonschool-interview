@@ -36,7 +36,7 @@ if argc != 2:
 # Verificamos si el argumento N es un entero
 n = validate_integer(argv[1])
 print()
-if n is not int:
+if n is str:
     print("N must be a number")
     sys.exit(1)
 
@@ -48,7 +48,15 @@ if n < 4:
 # Si llegamos aquí, significa que los argumentos son válidos
 # Podemos continuar con el programa...
 
-board = [[0 for j in range(n)] for i in range(4)]
+result = []
+board = [[0 for j in range(n)] for i in range(n)]
+count = 0
 
 for row in board:
-    print(row)
+    result.append(row)
+    count += 1
+    if count % 4 == 0:
+        print('\n')
+
+print(result)
+
